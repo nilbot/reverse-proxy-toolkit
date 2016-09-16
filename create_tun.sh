@@ -13,9 +13,10 @@ RPORT=$4
 HOST=$5
 
 ssh -M -S $SOCKET -fnNT -L $LPORT:$RLISTEN:$RPORT $HOST
+CREATE_RET=$?
 
-if [ $? -ne 0 ];then
-	exit 255
+if [ $CREATE_RET -ne 0 ];then
+	exit $CREATE_RET
 else
 	exit 0
 fi
