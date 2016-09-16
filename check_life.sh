@@ -2,7 +2,7 @@
 
 if [ ! $# -eq 2 ];
 then
-	echo "Usage: $0 socket_file remote_host";
+	echo "Usage: $0 socket_file host";
 	exit;
 fi
 
